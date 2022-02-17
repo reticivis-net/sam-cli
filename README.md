@@ -37,5 +37,11 @@ speaks `hello world!` with modern cmu pronunciation and voice values (these ones
     - [example values documented here](https://github.com/discordier/sam#typical-voice-values)
         - the values labeled "SAM" are the defaults.
 
-[minimist](https://www.npmjs.com/package/minimist) is used to naively pass all arguments straight to modern-sam so
+## notes
+
+- pkg, which is used to make the node program a cli program, is a little big and Perhaps bloated, also it comes with some
+overhead. if you want to make heavy use of this program, consider
+using [modern-sam](https://github.com/HexCodeFFF/modern-sam) in node directly
+
+- [minimist](https://www.npmjs.com/package/minimist) is used to naively pass all arguments straight to modern-sam so
 invalid arguments are ignored. the only validation done is ensuring required arguments are defined.
