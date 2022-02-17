@@ -8,7 +8,7 @@ const SamJs = require("sam-js")
 const fs = require("fs")
 const path = require("path");
 // parse args
-let argv = minimist(process.argv.slice(2), {boolean:["moderncmu", "debug"]})
+let argv = minimist(process.argv.slice(2), {boolean:["moderncmu", "debug", "singmode", "phonetic"]})
 if (!("wav" in argv)) {
     fail("wav output unspecified!")
 }
