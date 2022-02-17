@@ -1,0 +1,22 @@
+{
+  "name": "sam",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@stdlib/datasets-cmudict": "^0.0.8",
+    "minimist": "^1.2.5",
+    "pkg": "^5.5.2",
+    "sam-js": "https://github.com/HexCodeFFF/sam",
+    "to-words": "^3.1.0"
+  },
+  "scripts": {
+    "pkg": "pkg -C GZip package.json"
+  },
+  "bin": "app.js",
+  "pkg": {
+    "scripts": "app.js",
+    "assets": ["node_modules/@stdlib/datasets-cmudict/data/*.json"],
+    "outputPath": "dist"
+  }
+}
