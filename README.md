@@ -11,6 +11,34 @@ with [pkg](https://www.npmjs.com/package/pkg)
 
 ## usage
 
+### bundle vs exe
+
+there are currently 2 versions of this program. there's the [pkg](https://www.npmjs.com/package/pkg) powered standalone
+executable, and the [webpack](https://webpack.js.org/) powered bundle file. both versions are in the releases.
+
+#### bundle
+the bundle is all the node dependencies of SAM into one singular JS file
+
+pros:
+- OS independent
+- smaller filesize
+
+cons:
+- requires [node.js](https://nodejs.org/) to run
+
+#### exe
+
+the exe contains a copy of node.js which seamlessly runs the JS for you
+
+pros:
+- doesn't require any prior setup, just plug and play
+
+cons:
+- bigger filesize cause it bundles all of nodejs in the exe
+- OS dependent
+
+
+
 ### example:
 
 ```shell
@@ -39,9 +67,9 @@ speaks `hello world!` with modern cmu pronunciation and voice values (these ones
 
 ## notes
 
-- pkg, which is used to make the node program a cli program, is a little big and Perhaps bloated, also it comes with some
-overhead. if you want to make heavy use of this program, consider
-using [modern-sam](https://github.com/HexCodeFFF/modern-sam) in node directly
+- pkg, which is used to make the node program a cli program, is a little big and Perhaps bloated, also it comes with
+  some overhead. if you want to make heavy use of this program, consider
+  using [modern-sam](https://github.com/HexCodeFFF/modern-sam) in node directly
 
 - [minimist](https://www.npmjs.com/package/minimist) is used to naively pass all arguments straight to modern-sam so
-invalid arguments are ignored. the only validation done is ensuring required arguments are defined.
+  invalid arguments are ignored. the only validation done is ensuring required arguments are defined.

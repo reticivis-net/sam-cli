@@ -1,22 +1,32 @@
 {
   "name": "sam",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "license": "MIT",
   "dependencies": {
-    "@stdlib/datasets-cmudict": "^0.0.8",
+    "cmudict": "https://github.com/HexCodeFFF/datasets-cmudict",
     "minimist": "^1.2.5",
     "pkg": "^5.5.2",
     "sam-js": "https://github.com/HexCodeFFF/sam",
-    "to-words": "^3.1.0"
+    "to-words": "^3.1.0",
+    "wrapper-webpack-plugin": "^2.1.0"
   },
   "scripts": {
-    "pkg": "pkg -C GZip package.json"
+    "exe": "pkg -C GZip package.json",
+    "bundle": "npx webpack --config ./webpack.config.js"
   },
   "bin": "app.js",
   "pkg": {
     "scripts": "app.js",
-    "assets": ["node_modules/@stdlib/datasets-cmudict/data/*.json"],
+    "assets": [
+      "node_modules/@stdlib/datasets-cmudict/data/*.json"
+    ],
     "outputPath": "dist"
+  },
+  "devDependencies": {
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
   }
 }

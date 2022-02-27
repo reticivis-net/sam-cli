@@ -3,12 +3,13 @@ function fail(str) {
     process.exit(1)
 }
 
+// require("@stdlib/datasets-cmudict/")
 const minimist = require('minimist')
-const SamJs = require("sam-js")
+const SamJs = require("sam-js").default
 const fs = require("fs")
 const path = require("path");
 // parse args
-let argv = minimist(process.argv.slice(2), {boolean:["moderncmu", "debug", "singmode", "phonetic"]})
+let argv = minimist(process.argv.slice(2), {boolean: ["moderncmu", "debug", "singmode", "phonetic"]})
 if (!("wav" in argv)) {
     fail("wav output unspecified!")
 }
